@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
+
 const Search = ({ search, setSearch }) => {
   return (
-    <div>
+    <div className="flex-grow-1">
       <Form.Control
         placeholder="Search Player ..."
         aria-label="Search"
@@ -12,6 +14,11 @@ const Search = ({ search, setSearch }) => {
       ></Form.Control>
     </div>
   );
+};
+
+Search.propTypes = {
+  search: PropTypes.string.isRequired,
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default Search;

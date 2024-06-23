@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Col, Card } from 'react-bootstrap';
+
 export const PlayerCard = ({ name, img, stat }) => {
   const [isImage, setIsImage] = useState(true);
   return (
@@ -25,4 +27,10 @@ export const PlayerCard = ({ name, img, stat }) => {
       </Card>
     </Col>
   );
+};
+
+PlayerCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  stat: PropTypes.array.isRequired,
 };

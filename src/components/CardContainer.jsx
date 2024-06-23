@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import { Row } from 'react-bootstrap';
-import { data } from '../helper/data';
 import { PlayerCard } from './PlayerCard';
 
-const CardContainer = ({ search }) => {
+const CardContainer = ({ search, data }) => {
   return (
     <div className="container rounded-4 my-4 p-3 bg-light card-container">
       <Row className="g-3 justify-content-center ">
@@ -22,6 +22,11 @@ const CardContainer = ({ search }) => {
       </Row>
     </div>
   );
+};
+
+CardContainer.propTypes = {
+  search: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default CardContainer;
